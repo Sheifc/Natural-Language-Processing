@@ -2,9 +2,12 @@
 
 '''Importing libraries:
 
-In the first line, we import the nltk library, which is a tool for natural language processing.
-In the second line, we import specific modules from nltk that we will need, such as stopwords (for irrelevant words) and word_tokenize (for splitting the text into words).
-In the third line, we import the spacy library, which is another tool for more advanced natural language processing.'''
+In the first line, we import the nltk library, which is a tool for natural language 
+processing.
+In the second line, we import specific modules from nltk that we will need, such as 
+stopwords (for irrelevant words) and word_tokenize (for splitting the text into words).
+In the third line, we import the spacy library, which is another tool for more advanced 
+natural language processing.'''
 
 # step 1: Importing libraries
 import nltk
@@ -14,7 +17,8 @@ import spacy
 
 '''Text preprocessing:
 
-We download necessary resources for preprocessing, such as the list of stopwords and the tokenization model.
+We download necessary resources for preprocessing, such as the list of stopwords and the 
+tokenization model.
 We define an example text that we want to process.
 We convert the text to lowercase and tokenize it into words.
 We filter out the stopwords (like "is", "an", "for") and keep only the relevant words.'''
@@ -33,7 +37,8 @@ filtered_tokens = [token for token in tokens if token.isalpha() and token not in
 
 We load the spaCy natural language processing model for the English language.
 We process the text with spaCy to obtain a document object (doc).
-We extract the named entities from the document, which are elements like person names, locations, organizations, etc.'''
+We extract the named entities from the document, which are elements like person names, 
+locations, organizations, etc.'''
 
 # Step 3: Entity extraction
 nlp = spacy.load('en_core_web_sm')
@@ -43,7 +48,8 @@ entities = [(entity.text, entity.label_) for entity in doc.ents]  # Named entity
 
 '''Text analysis:
 
-We extract the noun phrases from the document, which are groups of words that act as nouns.'''
+We extract the noun phrases from the document, which are groups of words 
+that act as nouns.'''
 
 # Step 4: Text analysis (example of topic analysis using spaCy)
 noun_phrases = [chunk.text for chunk in doc.noun_chunks]  # Extracción de frases nominales
