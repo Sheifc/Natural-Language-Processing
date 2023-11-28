@@ -30,7 +30,7 @@ nltk.download('punkt')
 text = "This is an example sentence for text preprocessing."
 stop_words = set(stopwords.words('english'))
 
-tokens = word_tokenize(text.lower())  # Tokenizationn
+tokens = word_tokenize(text.lower())  # Tokenization
 filtered_tokens = [token for token in tokens if token.isalpha() and token not in stop_words]  # Filtering out irrelevant words
 
 '''Entity extraction:
@@ -52,7 +52,7 @@ We extract the noun phrases from the document, which are groups of words
 that act as nouns.'''
 
 # Step 4: Text analysis (example of topic analysis using spaCy)
-noun_phrases = [chunk.text for chunk in doc.noun_chunks]  # Extracción de frases nominales
+noun_phrases = [chunk.text for chunk in doc.noun_chunks]  # Extraction of nominal sentences
 
 '''Printing results:
 
